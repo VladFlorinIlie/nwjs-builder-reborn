@@ -1,5 +1,5 @@
 
-# nwjs-builder-reborn [![npm version](https://img.shields.io/npm/v/nwjs-builder-phoenix.svg)](https://npmjs.org/package/nwjs-builder-reborn) [![Standard Version](https://img.shields.io/badge/release-standard%20version-brightgreen.svg)](https://github.com/conventional-changelog/standard-version)
+# nwjs-builder-reborn [![npm version](https://img.shields.io/npm/v/nwjs-builder-reborn.svg)](https://npmjs.org/package/nwjs-builder-reborn) [![Standard Version](https://img.shields.io/badge/release-standard%20version-brightgreen.svg)](https://github.com/conventional-changelog/standard-version)
 
 A possible solution to build and package a ready for distribution NW.js app for Windows, macOS and Linux.
 
