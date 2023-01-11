@@ -1,5 +1,5 @@
 
-# nwjs-builder-phoenix [![npm version](https://img.shields.io/npm/v/nwjs-builder-phoenix.svg)](https://npmjs.org/package/nwjs-builder-phoenix) [![Standard Version](https://img.shields.io/badge/release-standard%20version-brightgreen.svg)](https://github.com/conventional-changelog/standard-version)
+# nwjs-builder-reborn [![npm version](https://img.shields.io/npm/v/nwjs-builder-phoenix.svg)](https://npmjs.org/package/nwjs-builder-reborn) [![Standard Version](https://img.shields.io/badge/release-standard%20version-brightgreen.svg)](https://github.com/conventional-changelog/standard-version)
 
 A possible solution to build and package a ready for distribution NW.js app for Windows, macOS and Linux.
 
@@ -34,13 +34,13 @@ Although NW.js has much lesser popularity than Electron, and is really troubled 
 
 * For apps destined for Mac, providing a `product_string` in the `package.json` will allow the Helper app to be [renamed for you](http://docs.nwjs.io/en/latest/For%20Users/Package%20and%20Distribute/#mac-os-x).
 
-* Install `nwjs-builder-phoenix` as a `devDependencies` of your NW.js project as follows:
+* Install `nwjs-builder-reborn` as a `devDependencies` of your NW.js project as follows:
 
 ```shell
 # Optional wine for building for Windows on other platforms.
 # The command may differ in different Linux distributions.
 #sudo apt-get install wine
-npm install nwjs-builder-phoenix --save-dev
+npm install nwjs-builder-reborn --save-dev
 ```
 
 By installing it locally, `build` and `run` commands will be available in npm scripts. You can access option lists via `./node_modules/.bin/{ build, run } --help`.
@@ -83,22 +83,22 @@ See also [sample project](./assets/project/) and [test cases](./test/) for refer
 
 ## Options
 
-Passing and managing commandline arguments can be painful. In `nwjs-builder-phoenix`, we configure via the `build` property of the `package.json` of your NW.js project.
+Passing and managing commandline arguments can be painful. In `nwjs-builder-reborn`, we configure via the `build` property of the `package.json` of your NW.js project.
 
 Also [see all available options here](./docs/Options.md).
 
 ## Differences to `nwjs-builder`
 
-* `nwjs-builder-phoenix` queries `versions.json` only when a symbol like `lts`, `stable` or `latest` is used to specify a version.
-* `nwjs-builder-phoenix` uses `rcedit` instead of `node-resourcehacker`, thus it's up to you to create proper `.ico` files with different sizes.
-* `nwjs-builder-phoenix` supports node.js 4.x and later versions only.
-* `nwjs-builder-phoenix` writes with TypeScript and benefits from strong typing and async/await functions.
+* `nwjs-builder-reborn` queries `versions.json` only when a symbol like `lts`, `stable` or `latest` is used to specify a version.
+* `nwjs-builder-reborn` uses `rcedit` instead of `node-resourcehacker`, thus it's up to you to create proper `.ico` files with different sizes.
+* `nwjs-builder-reborn` supports node.js 4.x and later versions only.
+* `nwjs-builder-reborn` writes with TypeScript and benefits from strong typing and async/await functions.
 
 ## Development
 
 ```bash
-git clone https://github.com/evshiron/nwjs-builder-phoenix
-cd nwjs-builder-phoenix
+git clone https://github.com/evshiron/nwjs-builder-reborn
+cd nwjs-builder-reborn
 npm install
 
 npm test
