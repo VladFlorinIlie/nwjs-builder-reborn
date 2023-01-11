@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.15.1"></a>
+## [1.15.1](https://github.com/VladFlorinIlie/nwjs-builder-reborn/compare/v1.15.0...v1.15.1) (2023-01-11)
+
+
+### Bug Fixes
+
+* **build,run:** allow usage of force-cache and destination ([9719aa7](https://github.com/VladFlorinIlie/nwjs-builder-reborn/commit/9719aa7))
+* **Downloader:** use cache in case of proxy error ([87543f8](https://github.com/VladFlorinIlie/nwjs-builder-reborn/commit/87543f8))
+
+
+
 <a name="1.15.0"></a>
 # [1.15.0](https://github.com/evshiron/nwjs-builder-phoenix/compare/v1.14.7...v1.15.0) (2018-12-19)
 
