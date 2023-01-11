@@ -23,7 +23,7 @@ export class Downloader extends DownloaderBase {
     public static DEFAULT_OPTIONS: IDownloaderOptions = {
         platform: process.platform,
         arch: process.arch,
-        version: '0.14.7',
+        version: '0.71.1',
         flavor: 'normal',
         mirror: 'https://dl.nwjs.io/',
         useCaches: true,
@@ -89,8 +89,10 @@ export class Downloader extends DownloaderBase {
             else if(err.code === 'EAI_AGAIN' && this.options.useCaches) {
                 console.info('DNS lookup timeout, use local caches at this time.');
                 return path;
-            }
-            else {
+            } else if (err.code === 'ECONNRESET' && this.options.useCaches) {
+                console.info('Proxy connection failed, use local caches at this time.');
+                return path;
+            } else {
                 throw err;
             }
 
