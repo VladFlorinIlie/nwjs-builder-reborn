@@ -148,6 +148,8 @@ export async function findExcludableDependencies(dir: string, pkg: any) {
 
     const prod = await execAsync('npm ls --prod --parseable', {
         cwd: dir,
+        encoding: "utf8",
+        detached: false,
     })
     .then(({
         stdout, stderr,
@@ -163,6 +165,8 @@ export async function findExcludableDependencies(dir: string, pkg: any) {
 
     const dev = await execAsync('npm ls --dev --parseable', {
         cwd: dir,
+        encoding: "utf8",
+        detached: false,
     })
     .then(({
         stdout, stderr,
@@ -286,7 +290,7 @@ export function spawnAsync(executable: string, args: string[], options: any = {}
     });
 }
 
-export function execAsync(command: string, options: any = {}): Promise<{
+export function execAsync(command: string, options: {"cwd": string, "encoding": string, "detached": boolean}): Promise<{
     stdout: string,
     stderr: string,
 }> {

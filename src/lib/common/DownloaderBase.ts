@@ -35,7 +35,7 @@ export abstract class DownloaderBase {
 
     protected destination: string = DownloaderBase.DEFAULT_DESTINATION;
 
-    public abstract async fetch(): Promise<string>;
+    public abstract fetch(): Promise<string>;
 
     protected abstract handleVersion(version: string): Promise<string>;
 
@@ -164,7 +164,7 @@ export abstract class DownloaderBase {
 
         debug('in download', 'start downloading', filename);
 
-        await new Promise((resolve, reject) => {
+        await new Promise<void>((resolve, reject) => {
             progress(request(url, {
                 encoding: null,
             }, (err, res, data) => {
@@ -178,7 +178,7 @@ export abstract class DownloaderBase {
                     return reject(e);
                 }
 
-                writeFile(path, data, err => err ? reject(err) : resolve());
+                writeFile(path, data, (err: any) => err ? reject(err) : resolve());
 
             }))
             .on('progress', (state: IRequestProgress) => {
