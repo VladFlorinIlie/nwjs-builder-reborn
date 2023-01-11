@@ -31,6 +31,17 @@ const argv = require('yargs')
     type: 'boolean',
     default: Runner.DEFAULT_OPTIONS.detached,
 })
+.option('force-caches', {
+    type: 'boolean',
+    describe: 'Force caches',
+    default: Runner.DEFAULT_OPTIONS.forceCaches,
+    alias: 'f',
+})
+.option('cache-destination', {
+    type: 'string',
+    describe: 'Directory used for storing caches',
+    default: Runner.DEFAULT_OPTIONS.destination,
+})
 .help()
 .argv;
 
@@ -44,6 +55,8 @@ const argv = require('yargs')
         chromeApp: argv['chrome-app'],
         mirror: argv.mirror,
         detached: argv.detached,
+        forceCaches: argv['force-caches'],
+        destination: argv.destination,
         mute: false,
     }, argv._);
 

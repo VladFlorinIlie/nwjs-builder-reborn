@@ -54,6 +54,17 @@ const argv = require('yargs')
     describe: 'Build concurrently',
     default: Builder.DEFAULT_OPTIONS.concurrent,
 })
+.option('force-caches', {
+    type: 'boolean',
+    describe: 'Force caches',
+    default: Builder.DEFAULT_OPTIONS.forceCaches,
+    alias: 'f',
+})
+.option('cache-destination', {
+    type: 'string',
+    describe: 'Directory used for storing caches',
+    default: Builder.DEFAULT_OPTIONS.destination,
+})
 .help()
 .argv;
 
@@ -71,6 +82,8 @@ const argv = require('yargs')
         chromeApp: argv['chrome-app'],
         mirror: argv.mirror,
         concurrent: argv.concurrent,
+        forceCaches: argv['force-caches'],
+        destination: argv.destination,
         mute: false,
     }, argv._.shift());
 
