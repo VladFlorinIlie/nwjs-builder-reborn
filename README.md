@@ -97,7 +97,7 @@ Also [see all available options here](./docs/Options.md).
 ## Development
 
 ```bash
-git clone https://github.com/evshiron/nwjs-builder-reborn
+git clone https://github.com/VladFlorinIlie/nwjs-builder-reborn
 cd nwjs-builder-reborn
 npm install
 
