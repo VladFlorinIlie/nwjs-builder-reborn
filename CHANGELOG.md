@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.15.2"></a>
+## [1.15.2](https://github.com/VladFlorinIlie/nwjs-builder-reborn/compare/v1.15.1...v1.15.2) (2023-01-13)
+
+
+### Bug Fixes
+
+* **README:** update git address ([afea52c](https://github.com/VladFlorinIlie/nwjs-builder-reborn/commit/afea52c))
+* **README:** updated npm version ([b5413cb](https://github.com/VladFlorinIlie/nwjs-builder-reborn/commit/b5413cb))
+
+
+
 <a name="1.15.1"></a>
 ## [1.15.1](https://github.com/VladFlorinIlie/nwjs-builder-reborn/compare/v1.15.0...v1.15.1) (2023-01-11)
 
